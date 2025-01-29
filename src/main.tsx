@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles.css'
-import { PokemonApp } from './PokemonApp'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router";
 
-createRoot(document.getElementById('root')!).render(
+import { PokemonApp } from "./PokemonApp";
+import "./styles.css";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <PokemonApp />
-  </StrictMode>,
-)
+    <BrowserRouter>
+      <PokemonApp />
+    </BrowserRouter>
+  </StrictMode>
+);
