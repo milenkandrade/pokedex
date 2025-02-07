@@ -5,7 +5,7 @@ import { Navbar } from "../ui/components/Navbar"
 export const AppRouter = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<PokemonPage />} />
       </Routes>
