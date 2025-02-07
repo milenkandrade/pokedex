@@ -4,11 +4,15 @@ import { BrowserRouter } from "react-router";
 
 import { PokemonApp } from "./PokemonApp";
 import "./styles.css";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <PokemonApp />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <PokemonApp />
+      </BrowserRouter>
+    </Provider>
   </StrictMode>
 );
